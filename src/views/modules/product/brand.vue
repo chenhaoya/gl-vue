@@ -152,6 +152,7 @@
       title="关联分类"
       :visible.sync="cateRelationDialogVisible"
       width="30%"
+      @closed="cateRelationDialogVisibleClose"
     >
       <el-popover placement="right-end" v-model="popCatelogSelectVisible">
         <category-cascader :catelogPath.sync="catelogPath"></category-cascader>
@@ -229,6 +230,9 @@ export default {
     this.getDataList();
   },
   methods: {
+    cateRelationDialogVisibleClose(){
+      // this.brandId=0
+    },
     addCatelogSelect() {
       //{"brandId":1,"catelogId":2}
       this.popCatelogSelectVisible = false;
