@@ -130,9 +130,9 @@ export default {
       this.catId = 0;
       this.getDataList();
     },
-    // 获取数据列表   // 转圈=true
+    // 获取数据列表
     getDataList() {
-      this.dataListLoading = false;
+      this.dataListLoading = true;
       this.$http({
         url: this.$http.adornUrl(`/product/attrgroup/list/${this.catId}`),
         method: "get",

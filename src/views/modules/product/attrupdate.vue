@@ -109,7 +109,8 @@ export default {
             let v = "";
             if (_this.spuAttrsMap["" + attr.attrId]) {
               v = _this.spuAttrsMap["" + attr.attrId].attrValue.split(";");
-              if (v.length == 1) {
+              // if (v.length == 1) {
+              if (v.length == 1 && attr.valueType == 0) {
                 v = v[0] + "";
               }
             }
